@@ -1,0 +1,11 @@
+四种伪类的首字母:LVHA。
+再重复一遍正确的顺序：a:link、a:visited、a:hover、a:active .
+link:连接平常的状态
+
+visited:连接被访问过之后
+hover:鼠标放到连接上的时候
+
+active:连接被按下的时候 
+<!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->

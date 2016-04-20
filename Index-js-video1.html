@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<style>
+	.wrap{
+		width:1270px;
+		margin:0 auto;
+	    text-align:center;
+	}
+	.title{
+		height:200px;
+		width:300px;
+		border-radius:10px;	
+	    margin:0 auto;
+		background-color:red; 
+	}
+	.buttons{
+		 margin:5px auto;
+	}
+</style>
+<body>
+	<div class="wrap">
+		<audio id="myAudio" autoplay="autoplay" controls="controls">
+	  <source src="http://sc1.111ttt.com/2016/1/02/21/195210959439.mp3"  />
+		Your browser does not support the audio element.
+		</audio>
+		<div class="title"><marquee behavior="alternate" direction="right" scrollamount="2">当爱在靠近 - 邹子倍.mp3</marquee></div>
+		<div class="buttons">
+			<button class="button play">播放/暂停</button>
+			<button class="button stop">停止</button>
+			<button class="button ahead">&laquo; 前进</button>
+			<button class="button back">后退 &raquo;</button>
+			<button class="button volup">音量 +;</button>
+			<button class="button voldown">音量 -;</button>
+		</div>
+	</div>
+	<script type="text/javascript">
+	        var myaudio = document.querySelector("#myAudio");
+	        document.querySelector(".play").addEventListener("click",function(e){
+	        	if(myaudio.currentTime==0){
+	        		myaudio.src="http://sc1.111ttt.com/2016/1/02/21/195210959439.mp3";
+	        	}
+	        	if(myaudio.play){
+	        		myaudio.paise();
+	        	}else{
+	        		myaudio.play();
+	        	}
+	        });
+	        document.querySelector(".stop").addEventListener("click",function(e){
+	        	myaudio.src="";
+
+	        });
+	        document.querySelector(".ahead").addEventListener("click",function(e){
+	        	myaudio.currentTime = myaudio.currentTime+5;
+	        });
+	        document.querySelector(".back").addEventListener("click",function(e){
+	        	myaudio.currentTime = myaudio.currentTime-5;
+	        });
+	        document.querySelector(".volup").addEventListener("click",function(e){
+	        	 myaudio.volume=0.2;
+	        	if(0<myaudio.volumel<1){
+	        		myaudio.volume=myaudio.volume+0.2;
+	        	}
+	        });
+	        document.querySelector(".voldown").addEventListener("click",function(e){
+	        	if(0<myaudio.volume<1){
+	        		myaudio.volume = myaudio.volume-0.2;
+	        	}
+	        });       
+</script>
+</body>
+</html>
