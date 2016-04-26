@@ -1,11 +1,19 @@
-四种伪类的首字母:LVHA。
-再重复一遍正确的顺序：a:link、a:visited、a:hover、a:active .
-link:连接平常的状态
+":link": a标签还未被访问的状态； 
 
-visited:连接被访问过之后
-hover:鼠标放到连接上的时候
+":visited": a标签已被访问过的状态； 
 
-active:连接被按下的时候 
+":hover": 鼠标悬停在a标签上的状态； 
+
+":active": a标签被鼠标按着时的状态；
+因为前2者两种状态是常态，而后2者是即时状态，当即时状态触发时，要覆盖常态，所以2个即时状态要放在后边； 
+
+因为在常态下：如果a标签被访问过后，就要呈现被访问过的状态，所以visited 要放在link后边； 
+
+因为鼠标按下时，伴随着悬停的a标签上，所以要想active覆盖hover，就必须把active放后边； 
+
+顺序记忆技巧： 
+
+lv包hao用
 <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
